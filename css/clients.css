@@ -1,0 +1,172 @@
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url("../fonts/Montserrat-SemiBold.ttf");
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../fonts/Montserrat-Regular.ttf");
+}
+*{
+	font-family: "Montserrat-Regular";
+}
+.container-fluid{
+	padding-left: 0;
+	padding-right: 0;
+}
+.container{
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.clients{
+	background-image: url("../img/Main-img/clients.png");
+	background-repeat: no-repeat;
+  background-position: center top;
+	min-height: 100%;
+	padding-top:141px;
+	padding-bottom: 160px;
+}
+.clients-text{
+	font-family: "Montserrat-SemiBold";
+	font-size:36px;
+}
+.gradient {
+	margin-left: -137px;
+	margin-right: -137px;
+	background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), color-stop(53.54%, rgba(0, 0, 0, 0.47)));
+	background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.47) 53.54%);
+	background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.47) 53.54%);
+	background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.47) 53.54%);
+}
+
+.listofClients {
+	margin-top: 5px;
+	background-color: #fff;
+}
+
+.client {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+	text-align: center;
+	margin-bottom: 10px;
+	height: 240px;
+	-webkit-transition: align-items 1.4s;
+	-webkit-transition: -webkit-box-align 1.4s, -webkit-align-items 1.4s;
+	transition: -webkit-box-align 1.4s, -webkit-align-items 1.4s;
+	-o-transition: align-items 1.4s;
+	transition: align-items 1.4s;
+	transition: align-items 1.4s, -webkit-box-align 1.4s, -webkit-align-items 1.4s, -ms-flex-align 1.4s;
+}
+
+.client:hover, .client.active {
+	-webkit-box-align: left;
+	-webkit-align-items: left;
+	    -ms-flex-align: left;
+	        align-items: left;
+}
+
+.client:after{
+	display: block;
+	width: 200px;
+	height: 240px;
+	content : "";
+    position: absolute;
+	top: 0;
+	margin-left: auto;
+    margin-right: auto;
+    left: 0;
+	right: 0;
+    opacity : 0;
+    z-index: 1;
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-transition: opacity 1.4s;
+	-o-transition: opacity 1.4s;
+	transition: opacity 1.4s;
+}
+
+.client:hover:after, .client.active:after{
+	opacity:1;
+}
+
+.client.years-1:after {
+	background-image: url("../img/clients/client-years-of-work/1_year_work.png");
+}
+
+.client.years-2:after {
+	background-image: url("../img/clients/client-years-of-work/2_year_work.png");
+}
+
+.client.years-3:after {
+	background-image: url("../img/clients/client-years-of-work/3_year_work.png");
+}
+
+.client.years-4:after {
+	background-image: url("../img/clients/client-years-of-work/4_year_work.png");
+}
+
+.client.years-5:after {
+	background-image: url("../img/clients/client-years-of-work/5_year_work.png");
+}
+
+.client.years-6:after {
+	background-image: url("../img/clients/client-years-of-work/6_year_work.png");
+}
+
+.client.years-7:after {
+	background-image: url("../img/clients/client-years-of-work/7_year_work.png");
+}
+
+.client.years-8:after {
+	background-image: url("../img/clients/client-years-of-work/8_year_work.png");
+}
+
+.client.years-9:after {
+	background-image: url("../img/clients/client-years-of-work/9_year_work.png");
+}
+
+.client.years-10:after {
+	background-image: url("../img/clients/client-years-of-work/10_year_work.png");
+}
+
+.client.years-11:after {
+	background-image: url("../img/clients/client-years-of-work/11_year_work.png");
+}
+
+.client.years-12:after {
+	background-image: url("../img/clients/client-years-of-work/12_year_work.png");
+}
+
+.client img {
+	width: 200px;
+	max-height: 200px;
+	-webkit-transition: width 0.7s;
+	-webkit-transition: width 0.4s ease-in-out;
+	-o-transition: width 0.4s ease-in-out;
+	transition: width 0.4s ease-in-out;
+	-webkit-transition:  0.4s ease-in-out;
+	-o-transition:  0.4s ease-in-out;
+	transition:  0.4s ease-in-out;
+}
+
+.client:hover img, .client.active img{
+	width: 115px;
+	-webkit-transition:  0.4s ease-in-out;
+	-o-transition:  0.4s ease-in-out;
+	transition:  0.4s ease-in-out;
+/*	-webkit-transform: translateY(-90px) !important;*/
+/*	    -ms-transform: translateY(-90px) !important;*/
+/*	        transform: translateY(-90px) !important;*/
+	position: absolute;
+	top: 0;
+}
