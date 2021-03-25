@@ -15,6 +15,11 @@
 
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/header-footer.css">
+  <style>
+  div + span {
+    color: #D5D5E1;
+  }
+</style>
 </head>
 
 <body>
@@ -24,6 +29,16 @@
         <div class="head-item col-md-3">
           <a class="main-name" href="index.html">Полиграфия</a>
         </div>
+         <form class="d-flex flex-column justify-content-center align-items-md-end col-md-9">
+          <div class="head-item d-flex flex-column justify-content-center align-items-md-end col-md-6">
+            <span>Username</span>
+            <input name="login">
+          </div>
+          <div class="head-item d-flex flex-column justify-content-center align-items-md-end col-md-3">
+            <span>Password</span>
+            <input name="password" type="password">
+          </div>
+          </form>
       </div>
     </div>
   </div>
@@ -186,7 +201,7 @@
             <li>Флексографическая печать на самоклеющейся пленке и бумаге наклеек, этикеток, стикеров;</li>
             <li>Оперативное изготовление способом цифровой печати коротких тиражей рекламно-полиграфической продукции.</li>
           </ul>
-          <a href="polygraphy.html" class="mb-auto"><button type="button" class="btn button">Подробнее</button></a>
+          <a href="polygraphy.html" class="mb-auto"><button type="button"  id="btn" onclick="changeColor()">Подробнее</button></a>
         </div>
         <div class="col-md-5 col-sm-12 polygraphy-img">
 
@@ -210,7 +225,7 @@
             <li>производство напольных, наполочных и прикассовых рекламно-информационных конструкций из металического прутка, профильных материалов и ДСП (дисплеи, холдеры, тестеры, диспенсеры и т.д.);</li>
             <li>производство напольных и подвесных рекламно-информационных конструкций из ПВХ-материалов, картона и гофрокартона (ростовые фигуры, объемные муляжи упаковок, торцевые стелажные стопперы, палетные конструкции).</li>
           </ul>
-          <a href="constructions.html"><button type="button" class="btn  button">Подробнее</button></a>
+          <a href="constructions.html"><button type="button"  onclick="changeColor()" id="btn" >Подробнее</button></a>
         </div>
         <div class="col-md-5 col-sm-12 order-md-1 constructions-img">
           <div class="row">
@@ -239,8 +254,8 @@
 
   <footer class="container-fluid">
         <div class="container">
-            <div class="row">
-                <div class="col-md-3 col-sm-12 d-flex flex-column justify-content-center align-items-md-start align-items-center footer-column">
+            <div class="row" >
+                <div style="float:left;" class="d-flex flex-column justify-content-center align-items-md-start align-items-center footer-column">
                     <a class="text-white" href="index.html">Главная</a>
                     <a class="text-white" href="polygraphy.html">Рекламная полиграфия</a>
                 </div>
@@ -252,29 +267,15 @@
         </div>
     </footer>
 
-   <!-- Скрипт для навбара хедера -->
-   <script>
-   window.onscroll = function() {myFunction()};
-   var navbar = document.getElementById("navbar");
-   var sticky = navbar.offsetTop;
-   var navList = document.getElementsByClassName("nav-item-header");
-   function myFunction() {
-     if(window.innerWidth >= 800 && window.innerHeight >= 600){
-       if (window.pageYOffset >= sticky) {
-         navbar.classList.add("sticky")
-         for (var i = 0; i < navList.length; i++) {
-           navList[i].classList.add("nav-item-header-sticky");
-         }
-         navList[0].classList.add("active-sticky");
-       } else {
-         navbar.classList.remove("sticky");
-         for (var i = 0; i < navList.length; i++) {
-           navList[i].classList.remove("nav-item-header-sticky");
-         }
-         navList[0].classList.remove("active-sticky");
-       }
-     }
-   }
-   </script>
+<script type="text/javascript"> 
+  var myColors = ['red','purple','#E84751','blue','orange','#323643']; 
+
+  function changeColor(){
+   var randomize = Math.floor (Math.random()*myColors.length);
+   $('#btn').css("background-color", myColors[randomize]);}
+</script>
+
+   
+ 
 </body>
 </html>
