@@ -167,7 +167,9 @@
 	right:110px;
 	top:137px;
 }
-
+span {
+    color: #D5D5E1;
+  }
 /*----------------------*/
 /*-----Constructions----*/
 .constructions{
